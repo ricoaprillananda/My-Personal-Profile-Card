@@ -1,0 +1,130 @@
+/* Global Reset & Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2c3e50, #000000);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card Container */
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Avatar Image */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Title */
+.title {
+  color: #144261;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Location Paragraph */
+.card p {
+  margin: 8px 0;
+}
+
+/* 🔗 Social Media Container */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* 🌈 Soft Rainbow Gradient Buttons */
+.socials a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(135deg, 
+    #e461ab,   /* Soft Red */
+    #c6fd2d,   /* Soft Orange-Yellow */
+    #22c1c3,   /* Sky Blue */
+    #7e5bef    /* Soft Violet */
+  );
+  background-size: 200% 200%;
+  animation: softRainbow 6s ease infinite;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transition: background 0.4s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* ⚪ Hover: Elegant Grey */
+.socials a:hover {
+  background: #0e5600a4; /* Elegant Grey */
+  box-shadow: 0 0 12px #5a5a5a, 0 0 22px #444444;
+  transform: scale(1.05);
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* 🌈 Rainbow Animation */
+@keyframes softRainbow {
+  0%   { background-position: 0% 100%; }
+  50%  { background-position: 100% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* 📱 Responsive Layout */
+@media (max-width: 400px) {
+  .card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .socials a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
