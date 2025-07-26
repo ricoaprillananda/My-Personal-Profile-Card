@@ -3,7 +3,7 @@
 A responsive and animated personal profile card built using pure HTML and CSS.  
 This project focuses on modern UI/UX styling, soft rainbow gradients, and elegant hover interactions.
 
-```
+---
 
 ## Features
 
